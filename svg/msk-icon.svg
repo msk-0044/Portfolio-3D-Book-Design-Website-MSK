@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="64"
+     height="64"
+     viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00eaff"/>
+      <stop offset="100%" stop-color="#0077ff"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Neon Logo -->
+  <text x="50%" y="50%"
+        font-size="40"
+        font-family="Consolas, monospace"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        fill="url(#neonGrad)"
+        stroke="#00eaff"
+        stroke-width="0.8"
+        filter="url(#neonGlow)"
+        class="msk-text">
+    M$K
+  </text>
+
+  <style>
+    .msk-text {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: draw 1s ease-in-out forwards,
+                 glowPulse 1s ease-in-out infinite alternate;
+    }
+    @keyframes draw {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes glowPulse {
+      from { filter: drop-shadow(0 0 2px #00eaff); }
+      to   { filter: drop-shadow(0 0 6px #00eaff); }
+    }
+  </style>
+</svg>

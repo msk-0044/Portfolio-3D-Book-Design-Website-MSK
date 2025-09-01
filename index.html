@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive 3D Book Portfolio Website by M$K with smooth page-turning animations, custom cursor, typing effects, and responsive design."
+    />
+    <meta
+      name="keywords"
+      content="3D book portfolio, portfolio website, interactive portfolio, MSK web design, animated portfolio, 3D website, creative portfolio"
+    />
+    <meta
+      name="author"
+      content="M$K, MSK, msk, Msk, Shakir Khan, SHAKIR KHAN"
+    />
+    <title>Portfolio Website &nbsp;| &nbsp; M&#36;K</title>
+    <link rel="shortcut icon" href="/svg/msk-icon.svg" type="image/svg+xml" />
+    <!-- <link rel="shortcut icon" href="/images/profile.jpg" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="root.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+      integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "a_Hek9KvZV9a1f4WA",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="webpage-intro">
+      <div class="preloader">
+        Webpage being loaded
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="main-intro">
+        <svg
+          width="100%"
+          height="50%"
+          viewBox="0 0 800 400"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00eaff" />
+              <stop offset="100%" stop-color="#0077ff" />
+            </linearGradient>
+            <filter id="neonGlow" x="-50%" y="-50%" width="100%" height="100%">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="3"
+                result="blur"
+              />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Main Logo M$K -->
+          <text
+            x="400"
+            y="200"
+            font-size="80"
+            font-family="Consolas, monospace"
+            text-anchor="middle"
+            fill="url(#neonGrad)"
+            stroke="#00eaff"
+            stroke-width="2"
+            filter="url(#neonGlow)"
+            class="msk-text"
+          >
+            M$K
+          </text>
+
+          <!-- Subtitle -->
+          <text
+            x="400"
+            y="280"
+            font-size="20"
+            font-family="Consolas, monospace"
+            text-anchor="middle"
+            fill="#00eaff"
+            opacity="0"
+            class="subtitle"
+          >
+            Programmer • Developer • Coder
+          </text>
+        </svg>
+      </div>
+    </div>
+    <div class="cursor-trail"></div>
+    <div class="cursor"></div>
+    <div class="container">
+      <div class="cover cover-left"></div>
+      <div class="cover cover-right"></div>
+
+      <div class="book">
+        <div class="book-page left-page" id="mob-p1">
+          <div class="profile-page">
+            <img src="/images/profile.jpg" alt="profile" />
+            <h1 id="my-name"></h1>
+            <h3>Web <span id="auto-text">Developer</span></h3>
+            <div class="social-media">
+              <a href="https://www.facebook.com/shakir.momin.1800"
+                ><i class="hgi hgi-stroke hgi-facebook-02"></i
+              ></a>
+              <a href="https://x.com/_msk0044">
+                <i class="hgi hgi-stroke hgi-new-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/_msk0044/"
+                ><i class="bx bxl-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/shakir-khan-msk/"
+                ><i class="bx bxl-linkedin"></i>
+              </a>
+            </div>
+            <div id="intro-para">
+              <p>
+                Hi, I’m Shakir Khan (MSK), a 21-year-old Front-End Web Developer
+                from Bhiwandi, Maharashtra. Currently pursuing Computer Science
+                Engineering.
+              </p>
+            </div>
+            <div class="btn-box">
+              <a
+                href="https://drive.google.com/file/d/12q2RY9KkPu6ZJbMVWNmOQm9k2oCZF31i/view?usp=sharing"
+                target="_blank"
+                class="btn"
+                >Download CV</a
+              >
+              <a href="#" class="btn btn-contact">Contact Me</a>
+            </div>
+          </div>
+        </div>
+        <!-- page 1 & 2 -->
+        <div class="book-page right-page turn" id="turn-1">
+          <!-- page 1 (Education) -->
+          <div class="front-page">
+            <h1 class="page-title">Education</h1>
+
+            <div class="education-box">
+              <!-- <div class="education-content">
+                <h3 class="course"> M.Tech - Upcoming</h3>
+                <span class="board">Mumbai University.</span>
+              </div> -->
+              <div class="education-content">
+                <h3 class="course">Computer Science Engineering - Pursuing</h3>
+                <span class="board"
+                  >Baba Saheb Ambedkar Marathwada University (BAMU),
+                  Aurangabad.</span
+                >
+              </div>
+              <div class="education-content">
+                <h3 class="course">12th (HSC) - 2023</h3>
+                <span class="board"
+                  >S.H.A Rais High School and Jr. College, Biwandi</span
+                >
+              </div>
+              <div class="education-content">
+                <h3 class="course">10th (SSC) - 2021</h3>
+                <span class="board"
+                  >Samadiya High School and Jr. College, Biwandi</span
+                >
+              </div>
+            </div>
+            <span class="page-number">1</span>
+
+            <!-- next btn -->
+            <span class="next-prev-btn" data-page="turn-1">
+              <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+            </span>
+          </div>
+
+          <!-- page 2 (Work Experience) -->
+          <div class="back-page">
+            <h1 class="page-title">Work Experience</h1>
+
+            <div class="worked-box">
+              <div class="worked-content">
+                <span class="year"
+                  ><i class="hgi hgi-stroke hgi-calendar-03"></i>Dec 2024 - Jan
+                  2025</span
+                >
+                <h3>E-commerce website Design - FreeLance</h3>
+                <p>
+                  Freelanced in eCommerce web design, creating responsive,
+                  user-friendly sites with secure checkout and optimized layouts
+                  to enhance client growth and customer experience.
+                </p>
+              </div>
+              <div class="worked-content">
+                <span class="year"
+                  ><i class="hgi hgi-stroke hgi-calendar-03"></i>Dec 2024 - Jan
+                  2025</span
+                >
+                <h3>E-commerce website Design - FreeLance</h3>
+                <p>
+                  Freelanced in eCommerce web design, creating responsive,
+                  user-friendly sites with secure checkout and optimized layouts
+                  to enhance client growth and customer experience.
+                </p>
+              </div>
+            </div>
+
+            <span class="page-number">2</span>
+            <!-- prev btn -->
+            <span class="next-prev-btn prev" data-page="turn-1">
+              <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- page 3 & 4 -->
+        <div class="book-page right-page turn" id="turn-2">
+          <!-- page 3 (Services) -->
+          <div class="front-page services-page">
+            <h1 class="page-title">My Services</h1>
+            <div class="services-box">
+              <div class="services-content">
+                <i class="bx bx-paint"></i>
+                <h3 class="underline-effect">Creative Design</h3>
+                <p>Blends creativity and usability in web experiences.</p>
+                <button class="btn read-more-btn" data-id="content-1">
+                  Read More
+                </button>
+                <div class="popup-read-more">
+                  <div class="read-more-items"></div>
+                  <button class="btn close-read-btn">Back</button>
+                </div>
+                <div id="content-1" style="display: none">
+                  <h3 class="underline-effect">Creative Design</h3>
+                  <p>
+                    As a creative designer, I turn concepts into visually
+                    engaging, user-friendly web interfaces. I prioritize layout,
+                    color, and structure to reflect the brand's identity.
+                  </p>
+                  <p>
+                    I use tools like Figma and CSS to design responsive,
+                    interactive experiences that work seamlessly across all
+                    screen sizes.
+                  </p>
+                  <p>
+                    Each project blends functionality and aesthetics to create a
+                    unique, memorable user journey.
+                  </p>
+                  <!-- Dynamically inserting back button -->
+                  <!-- <button class="btn back-btn">Back</button> -->
+                </div>
+              </div>
+              <div class="services-content">
+                <i class="bx bx-search"></i>
+                <h3 class="underline-effect">SEO</h3>
+                <p>Ranks better with SEO strategy, loads even faster.</p>
+                <button class="btn read-more-btn" data-id="content-2">
+                  Read More
+                </button>
+                <div id="content-2" style="display: none">
+                  <h3 class="underline-effect">Search Engine Optimization</h3>
+                  <p>
+                    I develop responsive, fast-loading websites with a strong
+                    focus on SEO. Clean code and proper structure help improve
+                    indexing and search visibility.
+                  </p>
+                  <p>
+                    By using on-page SEO techniques like optimized tags,
+                    semantic HTML, and performance best practices, I ensure
+                    every site is search-engine friendly.
+                  </p>
+                  <p>
+                    My goal is to deliver high-performing websites that rank
+                    better while offering an excellent user experience.
+                  </p>
+                  <!-- Dynamically inserting back button -->
+                  <!-- <button class="btn back-btn">Back</button> -->
+                </div>
+              </div>
+
+              <div class="services-content">
+                <i class="bx bx-code-alt"></i>
+                <h3 class="underline-effect">Web Developement</h3>
+                <p>
+                  Learning and building modern websites with passion and
+                  dedication daily.
+                </p>
+                <button class="btn read-more-btn" data-id="content-3">
+                  Read More
+                </button>
+                <div id="content-3" style="display: none">
+                  <h3 class="underline-effect">Web Developement</h3>
+                  <p>
+                    I'm a Computer Science student and a passionate front-end
+                    developer focused on building clean, responsive websites.
+                  </p>
+                  <p>
+                    Using HTML, CSS, JavaScript, and frameworks like React, I
+                    turn ideas into interactive and user-friendly designs. Every
+                    project reflects attention to both design and functionality.
+                  </p>
+                  <p>
+                    I'm always learning and improving, driven by curiosity and
+                    dedication.
+                  </p>
+                  <!-- Dynamically inserting back button -->
+                  <!-- <button class="btn back-btn">Back</button> -->
+                </div>
+              </div>
+            </div>
+            <span class="page-number">3</span>
+
+            <!-- next btn -->
+            <span class="next-prev-btn" data-page="turn-2">
+              <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+            </span>
+          </div>
+
+          <!-- page 4 (Skills) -->
+          <div class="back-page">
+            <h1 class="page-title">My Skills</h1>
+            <div class="skills-box">
+              <div class="skills-content">
+                <h3 class="underline-effect">Front-End</h3>
+                <div class="content">
+                  <span><i class="bx bxl-html5"></i> HTML</span>
+                  <span><i class="bx bxl-css3"></i> CSS</span>
+                  <span><i class="bx bxl-javascript"></i> JavaScript</span>
+                  <span><i class="bx bxl-react"></i> React</span>
+                  <span><i class="bx bxl-bootstrap"></i> Bootstrap</span>
+                </div>
+              </div>
+              <div class="skills-content">
+                <h3 class="underline-effect">Back-End</h3>
+                <div class="content">
+                  <span><i class="bx bxl-python"></i> Python</span>
+                  <span> <i class="bxl bx-my-sql"></i> MySQL</span>
+                  <span><i class="bx bxl-nodejs"></i> Node</span>
+                </div>
+              </div>
+            </div>
+            <span class="page-number">4</span>
+
+            <!-- prev btn -->
+            <span class="next-prev-btn prev" data-page="turn-2">
+              <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- page 5 & 6 -->
+
+        <div class="book-page right-page turn" id="turn-3">
+          <!-- page 5 (Live Project) -->
+          <div class="front-page">
+            <h1 class="page-title">Live Project</h1>
+            <div class="project-box">
+              <div class="img-box">
+                <img
+                  src="/images/652ec5d9fbd9a45bcec819ec_website_developers_bf209e1d84.avif"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-title">
+                <h3 class="underline-effect">Porftfolio Webpage</h3>
+                <a href="#">Live Preview <i class="bx bx-link-external"></i></a>
+              </div>
+              <!-- <p> <b>Tech Used:</b> <i class="bx bxl-html5"></i> <i class="bx bxl-css3"></i> <i class="bx bxl-javascript"></i></p> -->
+              <p><b>Tech Used:</b> HTML, CSS and JS</p>
+              <p><b>About Project: </b></p>
+              <p>
+                3D Book Portfolio with page-turning, animations, and modern UI
+                to showcase skills and projects interactively.
+              </p>
+              <div class="btn-box">
+                <a href="#" class="btn">Source Code</a>
+                <a href="#" class="btn">More Projects</a>
+              </div>
+            </div>
+
+            <span class="page-number">5</span>
+
+            <!-- next btn -->
+            <span class="next-prev-btn" data-page="turn-3">
+              <i class="hgi hgi-stroke hgi-arrow-right-01"></i>
+            </span>
+          </div>
+
+          <!-- page 6 (Contact Me) -->
+          <div class="back-page contact-page">
+            <h1 class="page-title">Contact Me</h1>
+            <div class="contact-box">
+              <div class="contact-content">
+                <div class="contact-form">
+                  <form action="" class="contact-form" id="contact-form">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="field"
+                        name="name"
+                        id="name"
+                        required
+                      />
+                      <label for="name">Full Name</label>
+                    </div>
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        class="field"
+                        name="email"
+                        id="email"
+                        required
+                      />
+                      <label for="email">Email Address</label>
+                    </div>
+                    <textarea
+                      name="comment"
+                      id="comment"
+                      class="field"
+                      cols="20"
+                      rows="7"
+                      placeholder="Your Message"
+                      required
+                    ></textarea>
+                    <input type="submit" class="btn" value="Send Message" />
+                  </form>
+                </div>
+              </div>
+            </div>
+            <span class="page-number">6</span>
+
+            <!-- prev btn -->
+            <span class="next-prev-btn prev" data-page="turn-3">
+              <i class="hgi hgi-stroke hgi-arrow-left-01"></i>
+            </span>
+
+            <!-- Profile btn | Homepage -->
+            <a href="#" class="profile-btn">
+              <p>Profile</p>
+              <i class="bx bxs-user"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- For Responsive (Temporary) -->
+      <!-- MOB && TABLETS -->
+
+      <div class="mob-book">
+        <!-- Page 1 - Profile -->
+        <div class="mob-book-page profile-page" id="mob-page-1">
+          <img src="/images/profile.jpg" alt="profile" />
+          <div class="info-box">
+            <h1 id="mob-my-name"></h1>
+            <h3>Web <span id="mob-auto-text">Developer</span></h3>
+          </div>
+          <div class="social-media">
+            <a href="https://www.facebook.com/shakir.momin.1800"
+              ><i class="hgi hgi-stroke hgi-facebook-02"></i
+            ></a>
+            <a href="https://x.com/_msk0044"
+              ><i class="hgi hgi-stroke hgi-new-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/_msk0044/"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/shakir-khan-msk/"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </div>
+          <p id="intro-para">
+            Hi, I’m Shakir Khan (MSK), a 21-year-old Front-End Web Developer
+            from Bhiwandi, Maharashtra. Currently pursuing Computer Science
+            Engineering.
+          </p>
+          <div class="btn-box">
+            <a
+              href="https://drive.google.com/file/d/12q2RY9KkPu6ZJbMVWNmOQm9k2oCZF31i/view"
+              target="_blank"
+              class="btn"
+              >Download CV</a
+            >
+            <a href="#" class="btn btn-contact" id="contact-page-btn"
+              >Contact Me</a
+            >
+          </div>
+          <span class="page-number">1</span>
+        </div>
+
+        <!-- Page 2 - Education -->
+        <div class="mob-book-page" id="mob-page-2">
+          <h1 class="page-title">Education</h1>
+          <div class="education-box">
+            <!-- <div class="education-content">
+                <h3 class="course"> M.Tech - Upcoming</h3>
+                <span class="board">Mumbai University.</span>
+              </div> -->
+            <div class="education-content">
+              <h3 class="course">Computer Science Engineering - Pursuing</h3>
+              <span class="board"
+                >Baba Saheb Ambedkar Marathwada University (BAMU),
+                Aurangabad.</span
+              >
+            </div>
+            <div class="education-content">
+              <h3 class="course">12th (HSC) - 2023</h3>
+              <span class="board"
+                >S.H.A Rais High School and Jr. College, Biwandi</span
+              >
+            </div>
+            <div class="education-content">
+              <h3 class="course">10th (SSC) - 2021</h3>
+              <span class="board"
+                >Samadiya High School and Jr. College, Biwandi</span
+              >
+            </div>
+          </div>
+          <span class="page-number">2</span>
+        </div>
+
+        <!-- Page 3 - Work Experience -->
+        <div class="mob-book-page" id="mob-page-3">
+          <h1 class="page-title">Work Experience</h1>
+          <div class="worked-box">
+            <div class="worked-content">
+              <span class="year"
+                ><i class="hgi hgi-stroke hgi-calendar-03"></i>Dec 2024 - Jan
+                2025</span
+              >
+              <h3>E-commerce website Design - FreeLance</h3>
+              <p>
+                Freelanced in eCommerce web design, creating responsive,
+                user-friendly sites with secure checkout and optimized layouts
+                to enhance client growth and customer experience.
+              </p>
+            </div>
+            <div class="worked-content">
+              <span class="year"
+                ><i class="hgi hgi-stroke hgi-calendar-03"></i>Dec 2024 - Jan
+                2025</span
+              >
+              <h3>E-commerce website Design - FreeLance</h3>
+              <p>
+                Freelanced in eCommerce web design, creating responsive,
+                user-friendly sites with secure checkout and optimized layouts
+                to enhance client growth and customer experience.
+              </p>
+            </div>
+          </div>
+          <span class="page-number">3</span>
+        </div>
+
+        <!-- Page 4 - services -->
+        <div class="mob-book-page" id="mob-page-4">
+          <h1 class="page-title">My Services</h1>
+          <div class="services-box">
+            <div class="services-content">
+              <i class="bx bx-paint"></i>
+              <h3 class="underline-effect">Creative Design</h3>
+              <p>Blends creativity and usability in web experiences.</p>
+              <button class="btn mob-read-more-btn" data-mob-id="mob-content-1">
+                Read More
+              </button>
+              <div class="mob-popup-read-more">
+                <div class="mob-read-more-items"></div>
+                <button class="btn mob-close-read-btn" style="display: none">
+                  Back
+                </button>
+              </div>
+              <div id="mob-content-1" style="display: none">
+                <h3 class="underline-effect">Creative Design</h3>
+                <p>
+                  As a creative designer, I turn concepts into visually
+                  engaging, user-friendly web interfaces. I prioritize layout,
+                  color, and structure to reflect the brand's identity.
+                </p>
+                <p>
+                  I use tools like Figma and CSS to design responsive,
+                  interactive experiences that work seamlessly across all screen
+                  sizes.
+                </p>
+                <p>
+                  Each project blends functionality and aesthetics to create a
+                  unique, memorable user journey.
+                </p>
+                <!-- Dynamically inserting back button -->
+                <!-- <button class="btn back-btn">Back</button> -->
+              </div>
+            </div>
+            <div class="services-content">
+              <i class="bx bx-search"></i>
+              <h3 class="underline-effect">SEO</h3>
+              <p>Ranks better with SEO strategy, loads even faster.</p>
+              <button class="btn mob-read-more-btn" data-mob-id="mob-content-2">
+                Read More
+              </button>
+              <div id="mob-content-2" style="display: none">
+                <h3 class="underline-effect">Search Engine Optimization</h3>
+                <p>
+                  I develop responsive, fast-loading websites with a strong
+                  focus on SEO. Clean code and proper structure help improve
+                  indexing and search visibility.
+                </p>
+                <p>
+                  By using on-page SEO techniques like optimized tags, semantic
+                  HTML, and performance best practices, I ensure every site is
+                  search-engine friendly.
+                </p>
+                <p>
+                  My goal is to deliver high-performing websites that rank
+                  better while offering an excellent user experience.
+                </p>
+                <!-- Dynamically inserting back button -->
+                <!-- <button class="btn back-btn">Back</button> -->
+              </div>
+            </div>
+
+            <div class="services-content">
+              <i class="bx bx-code-alt"></i>
+              <h3 class="underline-effect">Web Developement</h3>
+              <p>
+                Learning and building modern websites with passion and
+                dedication daily.
+              </p>
+              <button class="btn mob-read-more-btn" data-mob-id="content-3">
+                Read More
+              </button>
+              <div id="mob-content-3" style="display: none">
+                <h3 class="underline-effect">Web Developement</h3>
+                <p>
+                  I'm a Computer Science student and a passionate front-end
+                  developer focused on building clean, responsive websites.
+                </p>
+                <p>
+                  Using HTML, CSS, JavaScript, and frameworks like React, I turn
+                  ideas into interactive and user-friendly designs. Every
+                  project reflects attention to both design and functionality.
+                </p>
+                <p>
+                  I'm always learning and improving, driven by curiosity and
+                  dedication.
+                </p>
+                <!-- Dynamically inserting back button -->
+                <!-- <button class="btn back-btn">Back</button> -->
+              </div>
+            </div>
+          </div>
+
+          <span class="page-number">4</span>
+        </div>
+
+        <!-- Page 5 - SKills -->
+        <div class="mob-book-page" id="mob-page-5">
+          <h1 class="page-title">My Skills</h1>
+          <div class="skills-box">
+            <div class="skills-content">
+              <h3 class="underline-effect">Front-End</h3>
+              <div class="content">
+                <span><i class="bx bxl-html5"></i> HTML</span>
+                <span><i class="bx bxl-css3"></i> CSS</span>
+                <span><i class="bx bxl-javascript"></i> JavaScript</span>
+                <span><i class="bx bxl-react"></i> React</span>
+                <!-- <span><i class="bx bxl-bootstrap"></i> Bootstrap</span> -->
+              </div>
+            </div>
+            <div class="skills-content">
+              <h3 class="underline-effect">Back-End</h3>
+              <div class="content">
+                <span><i class="bx bxl-python"></i> Python</span>
+                <span> <i class="bxl bx-my-sql"></i> MySQL</span>
+                <span><i class="bx bxl-nodejs"></i> Node</span>
+              </div>
+            </div>
+          </div>
+          <span class="page-number">5</span>
+        </div>
+
+        <!-- Page 6 - Projects -->
+        <div class="mob-book-page" id="mob-page-6">
+          <h1 class="page-title">Live Project</h1>
+          <div class="project-box">
+            <div class="img-box">
+              <img
+                src="/images/652ec5d9fbd9a45bcec819ec_website_developers_bf209e1d84.avif"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-title">
+              <h3 class="underline-effect">Porftfolio Webpage</h3>
+              <a href="#">Live Preview <i class="bx bx-link-external"></i></a>
+            </div>
+            <p><b>Tech Used:</b> HTML, CSS and JS</p>
+            <p><b>About Project: </b></p>
+            <p>
+              3D Book Portfolio with page-turning, animations, and modern UI to
+              showcase skills and projects interactively.
+            </p>
+            <div class="btn-box">
+              <a href="#" class="btn">Source Code</a>
+              <a href="#" class="btn">More Projects</a>
+            </div>
+          </div>
+          <span class="page-number">6</span>
+        </div>
+
+        <!-- Page 7 - Contact -->
+        <div class="mob-book-page contact-page" id="mob-page-7">
+          <h1 class="page-title">Contact Me</h1>
+          <div class="contact-box">
+            <div class="contact-content">
+              <div class="contact-form">
+                <form action="" class="contact-form" id="mob-contact-form">
+                  <div class="input-group" id="input-group-1">
+                    <input
+                      type="text"
+                      class="field"
+                      name="name"
+                      id="mob-name"
+                      required
+                    />
+                    <label for="name"> Full Name </label>
+                  </div>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="field"
+                      name="email"
+                      id="mob-email"
+                      required
+                    />
+                    <label for="email"> Email Address </label>
+                  </div>
+                  <textarea
+                    name="mob-comment"
+                    class="field"
+                    id="mob-comment"
+                    cols="20"
+                    rows="7"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                  <input type="submit" class="btn" value="Send Message" />
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <span class="page-number">7</span>
+
+          <!-- Profile btn | Homepage -->
+          <a href="#" class="profile-btn" id="profile-page-btn">
+            <p>Profile</p>
+            <i class="bx bxs-user"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer">&copy; 2025 MSK | Shakir Khan. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
