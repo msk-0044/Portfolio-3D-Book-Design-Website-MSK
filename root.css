@@ -349,7 +349,16 @@
   .skills-content .content {
     gap: 0.6rem;
   }
-
+.skills-content .content.front-end-content {
+    height: 21rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .skills-content .content.front-end-content::-webkit-scrollbar{
+    display: none;
+  }
   .skills-content .content span {
     height: 4.7rem;
     width: 7rem;
@@ -521,3 +530,4 @@
     height: 48rem;
   }
 }
+
